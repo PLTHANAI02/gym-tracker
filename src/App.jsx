@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
 import Exercises from './pages/Exercises'
+import Routines from './pages/Routines'
+import RoutineEdit from './pages/RoutineEdit'
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
       <Route path="/signup" element={<PublicRoute><Signup /></PublicRoute>} />
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/exercises" element={<ProtectedRoute><Exercises /></ProtectedRoute>} />
+      <Route path="/routines" element={<ProtectedRoute><Routines /></ProtectedRoute>} />
+      <Route path="/routines/:day" element={<ProtectedRoute><RoutineEdit /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

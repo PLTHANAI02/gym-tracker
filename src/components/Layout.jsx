@@ -4,6 +4,7 @@ import ThemeToggle from './ThemeToggle'
 
 const links = [
   { to: '/', label: 'Dashboard', end: true },
+  { to: '/routines', label: 'Routines' },
   { to: '/exercises', label: 'Exercises' },
 ]
 
