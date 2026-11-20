@@ -1,0 +1,10 @@
+import { Navigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+
+export default function ProtectedRoute({ children }) {
+  const { session, loading } = useAuth()
+  if (loading) {
+    return <div className="flex min-h-screen items-center justify-center">Loading...</div>
+  }
+  return session ? children : <Navigate to="/login" replace />
+}
